@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import bb from '../images/bb-head.png';
+import bb from '../images/bb-front.png';
 import '../styling/home.css';
 
 class Home extends Component {
   render() {
     return (
-      <div>
-        <img src={bb} className="home-logo" alt="logo" />
+      <div className="container-fluid" id="main">
+        <img src={bb} className="img-fluid" alt="logo" />
         <h2>Welcome to Big Brother Experience</h2>
         <p>
           To get started, enter your name below.

@@ -1,19 +1,13 @@
-body {
-  text-align: center;
-  background-color: #222;
-  color: white;
-  font-size: large;
-}
-
-.home-logo {
-  margin: 20px;
-  animation: App-logo-spin infinite 20s linear;
-  animation: App-logo-bounce infinite 3s linear;
-}
-
 input {
     color: #222;
     text-align: center;
+}
+
+img {
+  margin: 20px;
+  animation: App-logo-spin infinite 20s linear;
+  animation: App-logo-bounce infinite 3s linear;
+  height: 50vh;
 }
 
 @keyframes App-logo-spin {

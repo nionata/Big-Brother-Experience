@@ -1,5 +1,9 @@
 body {
   font-family: Raleway, 'Helvetica Neue', 'Calibri Light', sans-serif;
+  text-align: center;
+  background-color: #222;
+  color: white;
+  font-size: large;
 }
 
 @media screen and (min-width: 320px) {
