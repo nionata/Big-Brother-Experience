@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import bb from './bb-head.png';
-import './App.css';
+import bb from './assets/images/bb-head.png';
+import './assets/styling/Home.css';
 
-class App extends Component {
+class Home extends Component {
   render() {
     return (
-      <div className="App">
-        <img src={bb} className="App-logo" alt="logo" />
+      <div>
+        <img src={bb} className="home-logo" alt="logo" />
         <h2>Welcome to Big Brother Experience</h2>
-        <p className="App-intro">
+        <p>
           To get started, enter your name below.
         </p>
         <input type="text" ref="inputName" className="form-inline" placeholder="Winston Smith"/>
@@ -18,4 +18,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Home;
