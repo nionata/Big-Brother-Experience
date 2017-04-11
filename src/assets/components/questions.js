@@ -22,17 +22,12 @@ class Questions extends Component {
           for(var i = 0; i < numberOfQuestions; i++) {
             var questionNumber = Math.floor(Math.random() * (questionBankNumber + 1))
 
-            while(used.indexOf(questionNumber) != - 1) {
+            while(used.indexOf(questionNumber) != -1) {
                 questionNumber = Math.floor(Math.random() * (questionBankNumber + 1))
             }
 
             used.push(questionNumber)
             selectedQuestions[i] = questions[questionNumber]
-          }
-      } else {
-          //console.log(selectedQuestions)
-          for(i = 0; i < numberOfQuestions; i++) {
-            //Reload selectedquestion
           }
       }
   }
@@ -45,17 +40,17 @@ class Questions extends Component {
             <h2>{question.question}</h2>
             <hr/>
             <div id="question-choices">
-                <label class="radio-inline">
-                    <input type="radio" name="choice" id="0" value="0" /> {selectedQuestions[this.state.question].choices[0]}
+                <label>
+                    <input type="radio" name="choice" id="0" value="0" checked={selectedQuestions[this.state.question].selected === 0} onClick={() => this.selectedChoice(0)} /> {selectedQuestions[this.state.question].choices[0]}
                 </label>
-                <label class="radio-inline">
-                    <input type="radio" name="choice" id="1" value="1" /> {selectedQuestions[this.state.question].choices[1]}
+                <label>
+                    <input type="radio" name="choice" id="1" value="1" checked={selectedQuestions[this.state.question].selected === 1} onClick={() => this.selectedChoice(1)} /> {selectedQuestions[this.state.question].choices[1]}
                 </label>
-                <label class="radio-inline">
-                    <input type="radio" name="choice" id="2" value="2" /> {selectedQuestions[this.state.question].choices[2]}
+                <label>
+                    <input type="radio" name="choice" id="2" value="2" checked={selectedQuestions[this.state.question].selected === 2} onClick={() => this.selectedChoice(2)} /> {selectedQuestions[this.state.question].choices[2]}
                 </label>
-                <label class="radio-inline">
-                    <input type="radio" name="choice" id="3" value="3" /> {selectedQuestions[this.state.question].choices[3]}
+                <label>
+                    <input type="radio" name="choice" id="3" value="3" checked={selectedQuestions[this.state.question].selected === 3} onClick={() => this.selectedChoice(3)} /> {selectedQuestions[this.state.question].choices[3]}
                 </label>
             </div>
             <hr/>
@@ -91,6 +86,14 @@ class Questions extends Component {
       )
   }
 
+  //When a choice is selected
+  selectedChoice(choice) {
+      selectedQuestions[this.state.question].selected = choice
+      this.setState({
+          updated: this.state.question
+      })
+  }
+
   //On every question except the first
   previousQuestion() {
       this.setState({
@@ -100,10 +103,12 @@ class Questions extends Component {
 
   //On every question except the last
   nextQuestion() {
-      if(1 == 1) {
+      if(selectedQuestions[this.state.question].selected != undefined) {
         this.setState({
           question: this.state.question + 1
         })
+      } else {
+          alert("You need to select a choice!")
       }
   }
 
@@ -119,7 +124,7 @@ class Questions extends Component {
   saveAndContinue(e) {
       e.preventDefault()
 
-      if(1 === 1) {
+      if(selectedQuestions[this.state.question].selected != undefined) {
         this.props.saveValues(selectedQuestions)
         this.props.nextStep()
       }
