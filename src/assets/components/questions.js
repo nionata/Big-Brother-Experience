@@ -41,13 +41,31 @@ class Questions extends Component {
       var question = selectedQuestions[this.state.question]
 
       return (
-        <span>
-            <h2>{question.question}</h2>
-            <input type="radio" name="choice" id="0" value="0" /> <label htmlFor="0">{selectedQuestions[this.state.question].choices[0]}</label><br/>
-            <input type="radio" name="choice" id="1" value="1" /> <label htmlFor="1">{selectedQuestions[this.state.question].choices[1]}</label><br/>
-            <input type="radio" name="choice" id="2" value="2" /> <label htmlFor="2">{selectedQuestions[this.state.question].choices[2]}</label><br/>
-            <input type="radio" name="choice" id="3" value="3" /> <label htmlFor="3">{selectedQuestions[this.state.question].choices[3]}</label><br/>
-        </span>
+        <div id="question-group">
+            <h2>
+                <div id="question-number">
+                    {this.state.question + 1}
+                </div>
+                {question.question}
+            </h2>
+            <hr/>
+            <div>
+                <label class="radio-inline">
+                    <input type="radio" name="choice" id="0" value="0" /> {selectedQuestions[this.state.question].choices[0]}
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="choice" id="1" value="1" /> {selectedQuestions[this.state.question].choices[1]}
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="choice" id="2" value="2" /> {selectedQuestions[this.state.question].choices[2]}
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="choice" id="3" value="3" /> {selectedQuestions[this.state.question].choices[3]}
+                </label>
+            </div>
+            <hr/>
+            {this.renderButtons()}
+        </div>
       )
   }
 
@@ -73,8 +91,8 @@ class Questions extends Component {
 
       return (
           <span>
-                <button className="btn btn-primary" onClick={previousFunc}>Previous</button>
-                <button className="btn btn-primary" onClick={nextFunc}>Next</button>
+                <button className="btn btn-basic pull-right" onClick={previousFunc}>Previous</button>
+                <button className="btn btn-basic pull-right" onClick={nextFunc}>Next</button>
           </span>
       )
   }
@@ -123,9 +141,8 @@ class Questions extends Component {
     return (
         <div className="container-fluid">
             <div className="progress" style={style}></div>
-            <h1>Question {this.state.question + 1} for you {this.props.fieldValues.name}</h1>
+            <h1>Big Brother has a few questions for you {this.props.fieldValues.name}</h1>
             {this.renderQuestion()}
-            {this.renderButtons()}
         </div>
     );
   }
