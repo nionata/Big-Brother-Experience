@@ -133,7 +133,7 @@ class Questions extends Component {
     }
 
     return (
-        <div className="container-fluid">
+        <div>
             <div className="progress" style={style}></div>
             <h1>Big Brother has a few questions for you {this.props.fieldValues.name}</h1>
             <div id="question-group">
