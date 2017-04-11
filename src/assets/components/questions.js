@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../styling/questions.css';
 import questions from '../questions.json';
 
-var numberOfQuestions = 4
+var numberOfQuestions = 10
 var selectedQuestions = {}
 
 class Questions extends Component {
