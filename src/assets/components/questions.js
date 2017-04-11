@@ -41,15 +41,10 @@ class Questions extends Component {
       var question = selectedQuestions[this.state.question]
 
       return (
-        <div id="question-group">
-            <h2>
-                <div id="question-number">
-                    {this.state.question + 1}
-                </div>
-                {question.question}
-            </h2>
+        <span>
+            <h2>{question.question}</h2>
             <hr/>
-            <div>
+            <div id="question-choices">
                 <label class="radio-inline">
                     <input type="radio" name="choice" id="0" value="0" /> {selectedQuestions[this.state.question].choices[0]}
                 </label>
@@ -64,8 +59,7 @@ class Questions extends Component {
                 </label>
             </div>
             <hr/>
-            {this.renderButtons()}
-        </div>
+        </span>
       )
   }
 
@@ -91,8 +85,8 @@ class Questions extends Component {
 
       return (
           <span>
-                <button className="btn btn-basic pull-right" onClick={previousFunc}>Previous</button>
-                <button className="btn btn-basic pull-right" onClick={nextFunc}>Next</button>
+                <button className="btn btn-default pull-left" onClick={previousFunc}>Previous</button>
+                <button className="btn btn-default pull-right" onClick={nextFunc}>Next</button>
           </span>
       )
   }
@@ -142,7 +136,13 @@ class Questions extends Component {
         <div className="container-fluid">
             <div className="progress" style={style}></div>
             <h1>Big Brother has a few questions for you {this.props.fieldValues.name}</h1>
-            {this.renderQuestion()}
+            <div id="question-group">
+                <div id="question-number">
+                    <h1>{this.state.question + 1}</h1>
+                </div>
+                {this.renderQuestion()}
+                {this.renderButtons()}
+            </div>
         </div>
     );
   }

@@ -53,9 +53,7 @@ class App extends Component {
 
   render() {
     return (
-        <span>
-            {this.showStep()}
-        </span>
+        <span>{this.showStep()}</span>
     )
   }
 }
