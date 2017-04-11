@@ -4,6 +4,8 @@ body {
   background-color: #222;
   color: white;
   font-size: large;
+  margin: 0px;
+  padding: 0px;
 }
 
 @media screen and (min-width: 320px) {

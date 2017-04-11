@@ -6,7 +6,7 @@ class Home extends Component {
   saveAndContinue(e) {
       e.preventDefault()
 
-      if(this.refs.inputName.value != "") {
+      if(this.refs.inputName.value !== "") {
         var data = {
             name: this.refs.inputName.value
         }

@@ -1,0 +1,125 @@
+{
+  "0": {
+    "question": "What color is Julia's sash?",
+    "choices": [
+      "Red",
+      "Blue",
+      "Green",
+      "Orange"
+    ],
+    "answer": [
+      "0"
+    ]
+  },
+  "1": {
+    "question": "Who is referred to as being \"pneumatic\" in Brave New World?",
+    "choices": [
+      "Lenina",
+      "Bernard",
+      "Mustapha Mond",
+      "Helmholtz"
+    ],
+    "answer": [
+      "0"
+    ]
+  },
+  "2": {
+    "question": "Who is the striking blonde with looks \"good enough to kill\"?",
+    "choices": [
+      "Claudia",
+      "Emma",
+      "Porphyria",
+      "Gertrude"
+    ],
+    "answer": [
+      "2"
+    ]
+  },
+  "3": {
+    "question": "If you had a brother or sister you loved, yet who you saw as a rival, what is the most valuable type of treasure?",
+    "choices": [
+      "a Diary",
+      "Amethyst",
+      "Poison",
+      "Ammonites"
+    ],
+    "answer": [
+      "3"
+    ]
+  },
+  "4": {
+    "question": "Oceania has always been at war with...?",
+    "choices": [
+      "Europe",
+      "The Savage Reservation",
+      "The World State",
+      "Eurasia"
+    ],
+    "answer": [
+      "0",
+      "3"
+    ]
+  },
+  "5": {
+    "question": "What is the best way to hide evidence of you feelings?",
+    "choices": [
+      "Disposing of them in a Memory Hole",
+      "writing them in a Diary",
+      "Drowning them to death in a river",
+      "None of the above"
+    ],
+    "answer": [
+      "0",
+      "1",
+      "2"
+    ]
+  },
+  "6": {
+    "question": "Which poet or author also wrote a distinguished dictionary?",
+    "choices": [
+      "Rutherford",
+      "Samuel Johnson",
+      "William Wordsworth",
+      "Helmholtz"
+    ],
+    "answer": [
+      "1"
+    ]
+  },
+  "7": {
+    "question": "In \"The Pupil\", out of Pemberton, Mrs. Moreen, and Morgan Moreen, how many character were satirized?",
+    "choices": [
+      "None",
+      "1",
+      "2",
+      "3"
+    ],
+    "answer": [
+      "3"
+    ]
+  },
+  "8": {
+    "question": "The Book is about...?",
+    "choices": [
+      "The Bible",
+      "The Brotherhood",
+      "Orgy-Porgy",
+      "Conditioning"
+    ],
+    "answer": [
+      "1"
+    ]
+  },
+  "9": {
+    "question": "...is the new black",
+    "choices": [
+      "Green",
+      "Black",
+      "Mulberry",
+      "Khaki"
+    ],
+    "answer": [
+      "2"
+    ]
+  }
+}
