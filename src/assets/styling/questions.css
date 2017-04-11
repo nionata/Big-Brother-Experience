@@ -14,10 +14,15 @@ h1 {
 #question-group {
     background-color: #337ab7;
     border-radius: 25px;
-    width: 75vw;
     padding: 10px 10px 55px 10px;
     margin: 0 auto;
     box-shadow: inset 0px 0px 10px black;
+}
+
+@media screen and (min-width: 768px) {
+  #question-group {
+    width: 75vw;
+  }
 }
 
 #question-number {
