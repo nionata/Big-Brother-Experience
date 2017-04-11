@@ -28,5 +28,26 @@
       "Gertrude"
     ],
     "answer": "2"
+  },
+  "3": {
+    "question": "If you had a brother or sister whom you loved, yet who you saw as a rival, what is the most valuable type of treasure?",
+    "choices": [
+      "a Diary",
+      "Amethyst",
+      "Poison",
+      "Ammonites"
+    ],
+    "answer": "3"
+  },
+  "4": {
+    "question": "Oceania has always been at war with...?",
+    "choices": [
+      "Europe",
+      "The Savage Reservation",
+      "The World State",
+      "Eurasia"
+    ],
+    "answer": "0",
+    "altAnswer": "3"
   }
 }
