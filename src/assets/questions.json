@@ -1,0 +1,32 @@
+{
+  "0": {
+    "question": "What color is Julia's sash?",
+    "choices": [
+      "Red",
+      "Blue",
+      "Green",
+      "Orange"
+    ],
+    "answer": "0"
+  },
+  "1": {
+    "question": "Who is refered to as pneumatic in Brave New World?",
+    "choices": [
+      "Lenina",
+      "Bernard",
+      "Mustapha Mond",
+      "Helmholtz"
+    ],
+    "answer": "0"
+  },
+  "2": {
+    "question": "Who is the striking blonde with looks \"good enough to kill\"?",
+    "choices": [
+      "Claudia",
+      "Emma",
+      "Porphyria",
+      "Gertrude"
+    ],
+    "answer": "2"
+  }
+}

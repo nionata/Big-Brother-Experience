@@ -4,19 +4,7 @@ import Home from './home';
 import Questions from './questions';
 import Results from './results';
 
-var fieldValues = {
-    name: null,
-    1: null,
-    2: null,
-    3: null,
-    4: null,
-    5: null,
-    6: null,
-    7: null,
-    8: null,
-    9: null,
-    10: null
-}
+var fieldValues = {}
 
 class App extends Component {
   constructor(props) {
@@ -58,18 +46,12 @@ class App extends Component {
                         saveValues={this.saveValues}/>
         case 2:
             return <Results fieldValues={fieldValues}/>
+            default:
+            return null
       }
   }
 
   render() {
-    /*var step = this.state.step
-
-    var style = {
-      width: (step / 5 * 100) + '%'
-
-      <div className="progress" style={style}></div>
-    }*/
-
     return (
         <span>
             {this.showStep()}

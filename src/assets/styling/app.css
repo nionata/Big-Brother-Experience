@@ -1,6 +1,3 @@
-.progress {
-    transition: all 0.2s ease;
-    height: 10px;
-    width: 50vw;
-    background-color: #337ab7;
+span {
+    margin: 0px;
 }

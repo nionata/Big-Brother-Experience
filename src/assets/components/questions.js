@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import '../styling/questions.css'
+import '../styling/questions.css';
+import questions from '../questions.json';
 
-const numberOfQuestions = 10
-var data = {
-}
+var numberOfQuestions = 3
+var selectedQuestions = {}
 
 class Questions extends Component {
   constructor(props) {
@@ -14,34 +14,73 @@ class Questions extends Component {
       }
   }
 
-  renderButtons() {
-      if(this.state.question == 0) {
-          return (
-            <span>
-                <button className="btn btn-primary" onClick={this.props.previousStep}>Previous</button>
-                <button className="btn btn-primary" onClick={this.nextQuestion.bind(this)}>Next</button>
-            </span>
-          )
-      } else if(this.state.question == (numberOfQuestions -1)) {
-          return (
-            <span>
-                <button className="btn btn-primary" onClick={this.previousQuestion.bind(this)}>Previous</button>
-                <button className="btn btn-primary" onClick={this.saveAndContinue.bind(this)}>Next</button>
-            </span>
-          )
+  componentWillMount() {
+      if(this.props.fieldValues["1"] == null) {
+          var questionBankNumber = Object.keys(questions).length - 1
+          var used = []
+
+          for(var i = 0; i < numberOfQuestions; i++) {
+            var questionNumber = Math.floor(Math.random() * (questionBankNumber + 1))
+
+            while(used.indexOf(questionNumber) != - 1) {
+                questionNumber = Math.floor(Math.random() * (questionBankNumber + 1))
+            }
+
+            used.push(questionNumber)
+            selectedQuestions[i] = questions[questionNumber]
+          }
       } else {
-          return (
-            <span>
-                <button className="btn btn-primary" onClick={this.previousQuestion.bind(this)}>Previous</button>
-                <button className="btn btn-primary" onClick={this.nextQuestion.bind(this)}>Next</button>
-            </span>
-          )
+          //console.log(selectedQuestions)
+          for(i = 0; i < numberOfQuestions; i++) {
+            //Reload selectedquestion
+          }
       }
+  }
+
+  renderQuestion() {
+      var question = selectedQuestions[this.state.question]
+
+      return (
+        <span>
+            <h2>{question.question}</h2>
+            <input type="radio" name="choice" id="0" value="0" /> <label htmlFor="0">{selectedQuestions[this.state.question].choices[0]}</label><br/>
+            <input type="radio" name="choice" id="1" value="1" /> <label htmlFor="1">{selectedQuestions[this.state.question].choices[1]}</label><br/>
+            <input type="radio" name="choice" id="2" value="2" /> <label htmlFor="2">{selectedQuestions[this.state.question].choices[2]}</label><br/>
+            <input type="radio" name="choice" id="3" value="3" /> <label htmlFor="3">{selectedQuestions[this.state.question].choices[3]}</label><br/>
+        </span>
+      )
+  }
+
+  renderButtons() {
+      var previousFunc = null
+      var nextFunc = null
+
+      if(this.state.question === 0) {
+          if(numberOfQuestions === 1) {
+            previousFunc = this.saveAndPrevious.bind(this)
+            nextFunc = this.saveAndContinue.bind(this)
+          } else {
+            previousFunc = this.saveAndPrevious.bind(this)
+            nextFunc = this.nextQuestion.bind(this)
+          }
+      } else if(this.state.question === (numberOfQuestions - 1)) {
+          previousFunc = this.previousQuestion.bind(this)
+          nextFunc = this.saveAndContinue.bind(this)
+      } else {
+          previousFunc = this.previousQuestion.bind(this)
+          nextFunc = this.nextQuestion.bind(this)
+      }
+
+      return (
+          <span>
+                <button className="btn btn-primary" onClick={previousFunc}>Previous</button>
+                <button className="btn btn-primary" onClick={nextFunc}>Next</button>
+          </span>
+      )
   }
 
   //On every question except the first
   previousQuestion() {
-      this.props.saveValues(data)
       this.setState({
           question: this.state.question - 1
       })
@@ -49,22 +88,27 @@ class Questions extends Component {
 
   //On every question except the last
   nextQuestion() {
-      this.props.saveValues(data)
-      this.setState({
+      if(1 == 1) {
+        this.setState({
           question: this.state.question + 1
-      })
+        })
+      }
+  }
+
+  //Only on first question
+  saveAndPrevious(e) {
+      e.preventDefault()
+
+      this.props.saveValues(selectedQuestions)
+      this.props.previousStep()
   }
 
   //Only on the last question
   saveAndContinue(e) {
       e.preventDefault()
 
-      if(1 == 1) {
-        var data = {
-            choiceOne: null
-        }
-
-        this.props.saveValues(data)
+      if(1 === 1) {
+        this.props.saveValues(selectedQuestions)
         this.props.nextStep()
       }
   }
@@ -73,13 +117,14 @@ class Questions extends Component {
     var question = this.state.question + 1
 
     var style = {
-      width: ((question / 10) * 100) + '%'
+      width: ((question / numberOfQuestions) * 100) + '%'
     }
 
     return (
         <div className="container-fluid">
             <div className="progress" style={style}></div>
             <h1>Question {this.state.question + 1} for you {this.props.fieldValues.name}</h1>
+            {this.renderQuestion()}
             {this.renderButtons()}
         </div>
     );
