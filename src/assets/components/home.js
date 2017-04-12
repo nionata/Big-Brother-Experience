@@ -3,6 +3,14 @@ import bb from '../images/bb-front.png';
 import '../styling/home.css';
 
 class Home extends Component {
+  constructor(props) {
+      super(props)
+
+      this.state = {
+          error: false
+      }
+  }
+
   saveAndContinue(e) {
       e.preventDefault()
 
@@ -13,6 +21,14 @@ class Home extends Component {
 
         this.props.saveValues(data)
         this.props.nextStep()
+
+        this.setState({
+            error: false
+        })
+      } else {
+         this.setState({
+            error: true
+        })
       }
   }
 
@@ -24,6 +40,11 @@ class Home extends Component {
         <p>
           To get started, enter your name below.
         </p>
+        {
+            this.state.error ? (
+                <h3 id="error">You must enter a name to move on!</h3>
+            ) : (null)
+        }
         <input type="text" ref="inputName" className="form-inline" defaultValue={this.props.fieldValues.name} placeholder="Winston Smith" />
         <button className="btn btn-primary" onClick={this.saveAndContinue.bind(this)}>Next</button>
       </div>
