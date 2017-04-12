@@ -35,6 +35,12 @@ h1 {
     box-shadow: inset 0px 0px 5px white;
 }
 
+#error {
+    background-color: #ee3b3b;
+    width: 50%;
+    margin: 5px auto;
+}
+
 #question-number h1 {
     vertical-align: middle;
     margin-top: 0px;

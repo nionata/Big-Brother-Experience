@@ -10,7 +10,8 @@ class Questions extends Component {
       super(props)
 
       this.state = {
-          question: 0
+          question: 0,
+          error: false
       }
   }
 
@@ -90,7 +91,8 @@ class Questions extends Component {
   selectedChoice(choice) {
       selectedQuestions[this.state.question].selected = choice
       this.setState({
-          updated: this.state.question
+          updated: this.state.question,
+          error: false
       })
   }
 
@@ -108,7 +110,9 @@ class Questions extends Component {
           question: this.state.question + 1
         })
       } else {
-          alert("You need to select a choice!")
+          this.setState({
+            error: true
+          })
       }
   }
 
@@ -142,6 +146,13 @@ class Questions extends Component {
             <div className="progress" style={style}></div>
             <h1>Big Brother has a few questions for you {this.props.fieldValues.name}</h1>
             <div id="question-group">
+                {
+                    this.state.error ? (
+                        <h3 id="error">You must choose an option to move on!</h3>
+                    ) : (
+                        null
+                    )
+                }
                 <div id="question-number">
                     <h1>{this.state.question + 1}</h1>
                 </div>
