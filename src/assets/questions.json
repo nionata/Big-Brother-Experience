@@ -64,7 +64,7 @@
     "question": "What is the best way to hide evidence of you feelings?",
     "choices": [
       "Disposing of them in a Memory Hole",
-      "writing them in a Diary",
+      "Writing them in a Diary",
       "Drowning them to death in a river",
       "None of the above"
     ],
@@ -75,7 +75,7 @@
     ]
   },
   "6": {
-    "question": "Which poet or author also wrote a distinguished dictionary?",
+    "question": "Which poet or author wrote a distinguished dictionary?",
     "choices": [
       "Rutherford",
       "Samuel Johnson",
@@ -120,6 +120,130 @@
     ],
     "answer": [
       "2"
+    ]
+  },
+  "10": {
+    "question": "What was the name of the book from which John learned to read?",
+    "choices": [
+      "The Complete Works of William Shakespeare",
+      "The Chemical and Bacteriological Conditioning of the Embryo. Practical Instructions for Beta Embryo-Store Workers",
+      "Romeo and Juliet",
+      "The Bokanovsky Process: An Outline of Embryo Development for the Hatchery and Conditioning Center"
+    ],
+    "answer": [
+      "1"
+    ]
+  },
+  "11": {
+    "question": "What is the fourth part of the World State's motto? \"Community, Identity, Stability...\"",
+    "choices": [
+      "Reasonability",
+      "Immorality",
+      "Accountability",
+      "None of the Above"
+    ],
+    "answer": [
+      "3"
+    ]
+  },
+  "12": {
+    "question": "Who would benefit most from hypnopaedia?",
+    "choices": [
+      "A lazy and rebellious teen",
+      "A baby that cries all night",
+      "A dying old woman",
+      "A magician"
+    ],
+    "answer": [
+      "0"
+    ]
+  },
+  "13": {
+    "question": "Petrarchan Sonnets are also known as...",
+    "choices": [
+      "Shakespearean Sonnets",
+      "English Sonnets",
+      "Italian Sonnets",
+      "Roman Sonnets"
+    ],
+    "answer": [
+      "2"
+    ]
+  },
+  "14": {
+    "question": "Which of the following is an examples of an anastrophe?",
+    "choices": [
+      "\"What is writ",
+      "is writ.\"",
+      "\"Come live with me",
+      "and be my love.\"",
+      "\"Milton! though shouldest be living at this hour: England hath need of thee.\"",
+      "\"I love not Man the less.\""
+    ],
+    "answer": [
+      "3"
+    ]
+  },
+  "15": {
+    "question": "What would your friends say about you if you were unable to think of a story to tell?",
+    "choices": [
+      "\"Sad is (s)he.\"",
+      "\"(S)he's not remarkably clever",
+      "but (s)he's very good looking.\"",
+      "\"Oh",
+      "lá-lá!\"",
+      "\"Even the Boer War would've been better.\""
+    ],
+    "answer": [
+      "0"
+    ]
+  },
+  "16": {
+    "question": "The promiscuous behavior of World State members has a similar effect as...",
+    "choices": [
+      "Eating an ice cream sundae",
+      "Going to church",
+      "Writing in a forbidden diary",
+      "Being bitten by a flea"
+    ],
+    "answer": [
+      "3"
+    ]
+  },
+  "17": {
+    "question": "A key element of a Shakespearean sonnet is...",
+    "choices": [
+      "Being an apostrophe",
+      "The concluding couplet",
+      "Having an ABBA rhyme scheme",
+      "Having no rhyme scheme"
+    ],
+    "answer": [
+      "1"
+    ]
+  },
+  "18": {
+    "question": "What animal is associated with Avarice?",
+    "choices": [
+      "Fox",
+      "Snake",
+      "Camel",
+      "Lion"
+    ],
+    "answer": [
+      "2"
+    ]
+  },
+  "19": {
+    "question": "The Monk in Canterbury Tales was...",
+    "choices": [
+      "Poor",
+      "Wealthy",
+      "Humble",
+      "Discourteous"
+    ],
+    "answer": [
+      "1"
     ]
   }
 }
