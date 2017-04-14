@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Switch, Router, Route } from 'react-router'
+import { Switch, Router, Route } from 'react-router';
 import App from './assets/components/app.js';
-import About from './assets/components/about.js'
-import NotFound from './assets/components/404.js'
+import About from './assets/components/about.js';
+import NotFound from './assets/components/404.js';
+import Footer from './assets/components/footer.js';
 import './index.css';
 
 import createBrowserHistory from 'history/createBrowserHistory'
@@ -18,6 +19,7 @@ ReactDOM.render(
         <Route exact path="/about" component={About} />
         <Route component={NotFound} />
       </Switch>
+      <Route path="/" component={Footer} />
     </div>
   </Router>,
   document.getElementById('root')

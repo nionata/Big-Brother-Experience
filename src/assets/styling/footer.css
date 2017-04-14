@@ -1,0 +1,30 @@
+.footer {
+}
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #343435;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+}
+
+li a:hover {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+li a:selected {
+    color: white;
+    text-decoration: none;
+}
