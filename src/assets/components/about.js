@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../styling/about.css'
 import nick from '../images/nick.png'
+import natalie from '../images/natalie.jpg'
 
 class About extends Component {
   render() {
@@ -19,7 +20,7 @@ class About extends Component {
                 </div>
             </div>
             <div className="col-md-6">
-                <img src={nick} alt="nick" className="img-responsive" />
+                <img src={natalie} alt="nick" className="img-responsive" />
                 <div className="img-subtitle">
                     <h3>Natalie Rincon</h3>
                     <h4>Literature Enthusiast</h4>
