@@ -34,7 +34,7 @@ class Home extends Component {
 
   render() {
     return (
-      <div className="container-fluid" id="main">
+      <div className="container-fluid" id="home">
         <img src={BBFront} className="img-fluid" alt="logo" />
         <h2>Welcome to Big Brother Experience</h2>
         <p>

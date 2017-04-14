@@ -1,8 +1,8 @@
-img {
+#home img {
   margin: 20px;
+  height: 50vh;
   animation: App-logo-spin infinite 20s linear;
   animation: App-logo-bounce infinite 3s linear;
-  height: 50vh;
 }
 
 @keyframes App-logo-spin {
