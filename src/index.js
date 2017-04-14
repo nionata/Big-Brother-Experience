@@ -11,6 +11,8 @@ import createBrowserHistory from 'history/createBrowserHistory'
 
 const newHistory = createBrowserHistory();
 
+//<Route path="/" component={Footer} />
+
 ReactDOM.render(
   <Router history={newHistory}>
     <div>
@@ -19,7 +21,6 @@ ReactDOM.render(
         <Route exact path="/about" component={About} />
         <Route component={NotFound} />
       </Switch>
-      <Route path="/" component={Footer} />
     </div>
   </Router>,
   document.getElementById('root')
