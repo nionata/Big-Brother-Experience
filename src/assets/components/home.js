@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import bb from '../images/bb-front.png';
+import BBFront from '../images/bb-front.png';
 import '../styling/home.css';
 
 class Home extends Component {
@@ -35,7 +35,7 @@ class Home extends Component {
   render() {
     return (
       <div className="container-fluid" id="main">
-        <img src={bb} className="img-fluid" alt="logo" />
+        <img src={BBFront} className="img-fluid" alt="logo" />
         <h2>Welcome to Big Brother Experience</h2>
         <p>
           To get started, enter your name below.
