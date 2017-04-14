@@ -54,7 +54,13 @@ label {
     padding: 10px;
     text-align: left;
     color: #333;
+    transition-duration: .3s;
 }
+
+label:hover {
+    transform: scale(1.1);
+}
+
 
 button {
     margin-bottom: 100px;
