@@ -12,14 +12,18 @@ class About extends Component {
           <h1>This is the brain child of:</h1>
           <div className="row">
             <div className="col-md-6">
-                <h3>Nicholas Ionata</h3>
-                <h4>Technology Enthusiast</h4>
                 <img src={nick} alt="nick" className="img-responsive" />
+                <div className="img-subtitle">
+                    <h3>Nicholas Ionata</h3>
+                    <h4>Technology Enthusiast</h4>
+                </div>
             </div>
             <div className="col-md-6">
-                <h3>Natalie Rincon</h3>
-                <h4>Literature Enthusiast</h4>
                 <img src={nick} alt="nick" className="img-responsive" />
+                <div className="img-subtitle">
+                    <h3>Natalie Rincon</h3>
+                    <h4>Literature Enthusiast</h4>
+                </div>
             </div>
           </div>
         </div>
