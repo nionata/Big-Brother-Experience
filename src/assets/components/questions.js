@@ -142,7 +142,6 @@ class Questions extends Component {
         document.getElementById("questions").className = "fade-out"
         setTimeout(function() {
             this.props.saveValues(selectedQuestions)
-            console.log("WHy tho")
             this.props.nextStep()
         }.bind(this), 1000)
       }
@@ -158,7 +157,6 @@ class Questions extends Component {
     return (
         <div id="questions" className="fade-out">
             <div className="progress" style={style}></div>
-            <h1>Big Brother has a few questions for you {this.props.fieldValues.name}</h1>
             <div id="question-group">
                 {
                     this.state.error ? (

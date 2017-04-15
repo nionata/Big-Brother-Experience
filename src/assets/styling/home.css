@@ -4,6 +4,14 @@
   animation: App-logo-bounce infinite 3s linear;
 }
 
+#home {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+}
+
 @keyframes App-logo-bounce {
   0% { transform: translateY(0); }
   50% { transform: translateY(10px); }

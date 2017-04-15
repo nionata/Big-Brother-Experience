@@ -7,15 +7,11 @@
     border-radius: 0px;
 }
 
-#questions h1 {
-    margin-bottom: 50px;
-}
-
 #question-group {
     background-color: #337ab7;
     border-radius: 25px;
     padding: 10px 10px 55px 10px;
-    margin: 0 auto;
+    margin: 15vh auto;
     box-shadow: inset 0px 0px 10px black;
 }
 
