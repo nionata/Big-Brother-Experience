@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../styling/questions.css';
 import questions from '../questions.json';
 
-var numberOfQuestions = 1
+var numberOfQuestions = 10
 var selectedQuestions = {}
 
 class Questions extends Component {
@@ -33,9 +33,9 @@ class Questions extends Component {
       }
   }
 
-    componentDidMount() {
-        document.getElementById("questions").className = "fade-in"
-    }
+  componentDidMount() {
+    document.getElementById("questions").className = "fade-in"
+  }
 
   renderQuestion() {
       var question = selectedQuestions[this.state.question]
