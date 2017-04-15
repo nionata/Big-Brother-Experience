@@ -1,13 +1,7 @@
 #home img {
   margin: 20px;
   height: 50vh;
-  animation: App-logo-spin infinite 20s linear;
   animation: App-logo-bounce infinite 3s linear;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }
 
 @keyframes App-logo-bounce {

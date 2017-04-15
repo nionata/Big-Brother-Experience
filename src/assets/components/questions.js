@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../styling/questions.css';
 import questions from '../questions.json';
 
-var numberOfQuestions = 10
+var numberOfQuestions = 1
 var selectedQuestions = {}
 
 class Questions extends Component {
@@ -33,12 +33,16 @@ class Questions extends Component {
       }
   }
 
+    componentDidMount() {
+        document.getElementById("questions").className = "fade-in"
+    }
+
   renderQuestion() {
       var question = selectedQuestions[this.state.question]
 
       return (
         <span>
-            <h2>{question.question}</h2>
+            <h2 id="question-question">{question.question}</h2>
             <hr/>
             <div id="question-choices">
                 <label>
@@ -106,9 +110,15 @@ class Questions extends Component {
   //On every question except the last
   nextQuestion() {
       if(selectedQuestions[this.state.question].selected != undefined) {
-        this.setState({
-          question: this.state.question + 1
-        })
+        document.getElementById("question-choices").className = "fade-out"
+        document.getElementById("question-question").className = "fade-out"
+        setTimeout(function() {
+            document.getElementById("question-choices").className = "fade-in"
+            document.getElementById("question-question").className = "fade-in"
+            this.setState({
+                question: this.state.question + 1
+            })
+        }.bind(this), 1000)
       } else {
           this.setState({
             error: true
@@ -129,8 +139,12 @@ class Questions extends Component {
       e.preventDefault()
 
       if(selectedQuestions[this.state.question].selected != undefined) {
-        this.props.saveValues(selectedQuestions)
-        this.props.nextStep()
+        document.getElementById("questions").className = "fade-out"
+        setTimeout(function() {
+            this.props.saveValues(selectedQuestions)
+            console.log("WHy tho")
+            this.props.nextStep()
+        }.bind(this), 1000)
       }
   }
 
@@ -142,7 +156,7 @@ class Questions extends Component {
     }
 
     return (
-        <div id="questions">
+        <div id="questions" className="fade-out">
             <div className="progress" style={style}></div>
             <h1>Big Brother has a few questions for you {this.props.fieldValues.name}</h1>
             <div id="question-group">
