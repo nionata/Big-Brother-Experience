@@ -77,7 +77,7 @@
   "6": {
     "question": "Which poet or author wrote a distinguished dictionary?",
     "choices": [
-      "Rutherford",
+      "Syme",
       "Samuel Johnson",
       "William Wordsworth",
       "Helmholtz"
@@ -244,6 +244,124 @@
     ],
     "answer": [
       "1"
+    ]
+  },
+  "20": {
+    "question": "...",
+    "choices": [
+      "\"Down with Big Brother\"",
+      "\"War is Peace\"",
+      "\"2+2=5\"",
+      "\"Ignorance is Strength\""
+    ],
+    "answer": [
+      "0"
+    ]
+  },
+  "21": {
+    "question": "Always be suspicious of...",
+    "choices": [
+      "Portraits of Churches",
+      "Ammonites",
+      "Books",
+      "Men"
+    ],
+    "answer": [
+      "0"
+    ]
+  },
+  "22": {
+    "question": "What group in Oceania consisted of children loyal to the Party?",
+    "choices": [
+      "The Party Youth",
+      "The Junior Spies",
+      "The Big Brother Youth",
+      "The Thoughtcrime Catchers"
+    ],
+    "answer": [
+      "1"
+    ]
+  },
+  "23": {
+    "question": "If your name started with a 'W', what type of pet animal would you stay away from?",
+    "choices": [
+      "A snake",
+      "A dog",
+      "A rat",
+      "A spider"
+    ],
+    "answer": [
+      "2"
+    ]
+  },
+  "24": {
+    "question": "What is the appropriate amount of time to express your hate?",
+    "choices": [
+      "(2+2)-3 minutes",
+      "2(2+2)-(5+1) minutes",
+      "30 seconds",
+      "Never express hate"
+    ],
+    "answer": [
+      "0"
+    ]
+  },
+  "25": {
+    "question": "Complete the line: \"You owe me five farthings...\"",
+    "choices": [
+      "\"Say the bells of St. Martin's\"",
+      "\"Say the bells of St. Clement's\"",
+      "\"Here comes the chopper to chop off your head\"",
+      "\"Say the bells of Old Bailey\""
+    ],
+    "answer": [
+      "0"
+    ]
+  },
+  "26": {
+    "question": "Who loves Big Brother by the end of the 1984?",
+    "choices": [
+      "Big Brother himself",
+      "Julia",
+      "The Proles",
+      "Winston"
+    ],
+    "answer": [
+      "3"
+    ]
+  },
+  "27": {
+    "question": "Who said \"They got me a long time ago\"?",
+    "choices": [
+      "Helmholtz",
+      "Mustapha Mond",
+      "O'Brien",
+      "Hamlet"
+    ],
+    "answer": []
+  },
+  "28": {
+    "question": "What food item did Winston place above his family?",
+    "choices": [
+      "Victory Gin",
+      "Chocolate",
+      "Coffee",
+      "Sandwhiches"
+    ],
+    "answer": [
+      "1"
+    ]
+  },
+  "29": {
+    "question": "Deltas are conditioned to hate...?",
+    "choices": [
+      "Books and flowers",
+      "Money and Intelligence",
+      "Music and Writing",
+      "Pencils and Paintings"
+    ],
+    "answer": [
+      "0"
     ]
   }
 }
