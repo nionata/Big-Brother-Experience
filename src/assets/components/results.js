@@ -55,20 +55,24 @@ class Results extends Component {
                             var style = {
                                 backgroundColor: color
                             }
+
                             return (
-                                <tr key={index} style={style}>
+                                <tr key={index}>
                                     <td>{index + 1}</td>
                                     <td>{item.question}</td>
                                     <td>
                                         {
                                             item.answer.map(function(item2, index2) {
                                                 return (
-                                                    item.choices[item2]
+                                                    <span>
+                                                        {item.choices[item2]}
+                                                        <br/>
+                                                    </span>
                                                 )
                                             })
                                         }
                                     </td>
-                                    <td>{item.choices[item.selected]}</td>
+                                    <td style={style}>{item.choices[item.selected]}</td>
                                 </tr>
                             )
                         })}
