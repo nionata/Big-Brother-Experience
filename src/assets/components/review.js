@@ -24,11 +24,13 @@ class Review extends Component {
                         {fieldValues.map(function(item, index) {
                             var color = ""
 
-                            if(item.choices[item.answer[0]] == item.choices[item.selected]) {
-                                color = "#31dd8a"
-                            } else {
-                                color = "#ee3b3b"
-                            }
+                            item.answer.map(function(item2, index2) {
+                                if(item2 == item.selected) {
+                                    color = "#31dd8a"
+                                } else {
+                                    color = "#ee3b3b"
+                                }
+                            })
 
                             var style = {
                                 backgroundColor: color
