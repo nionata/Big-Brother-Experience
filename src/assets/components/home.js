@@ -15,6 +15,17 @@ class Home extends Component {
       e.preventDefault()
 
       if(this.refs.inputName.value !== "") {
+        if(this.refs.inputName.value == "admin") {
+            var data = {
+                name: this.refs.inputName.value
+            }
+
+            this.props.saveValues(data)
+            this.props.nextStep()
+
+            return
+        }
+
         var num = 1
 
         document.getElementById("home").className += " fade-out"

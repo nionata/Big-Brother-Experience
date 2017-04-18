@@ -61,7 +61,7 @@
     ]
   },
   "5": {
-    "question": "What is the best way to hide evidence of you feelings?",
+    "question": "What is the best way to hide evidence of your feelings?",
     "choices": [
       "Disposing of them in a Memory Hole",
       "Writing them in a Diary",
@@ -171,17 +171,15 @@
     ]
   },
   "14": {
-    "question": "Which of the following is an examples of an anastrophe?",
+    "question": "Which of the following is an example of an anastrophe?",
     "choices": [
-      "\"What is writ",
-      "is writ.\"",
-      "\"Come live with me",
-      "and be my love.\"",
+      "\"What is writ is writ.\"",
+      "\"Come live with me and be my love.\"",
       "\"Milton! though shouldest be living at this hour: England hath need of thee.\"",
       "\"I love not Man the less.\""
     ],
     "answer": [
-      "3"
+      "2"
     ]
   },
   "15": {
@@ -319,7 +317,7 @@
     ]
   },
   "26": {
-    "question": "Who loves Big Brother by the end of the 1984?",
+    "question": "Who loves Big Brother by the end of 1984?",
     "choices": [
       "Big Brother himself",
       "Julia",
@@ -338,7 +336,9 @@
       "O'Brien",
       "Hamlet"
     ],
-    "answer": []
+    "answer": [
+      "2"
+    ]
   },
   "28": {
     "question": "What food item did Winston place above his family?",
@@ -346,7 +346,7 @@
       "Victory Gin",
       "Chocolate",
       "Coffee",
-      "Sandwhiches"
+      "Sandwiches"
     ],
     "answer": [
       "1"
@@ -362,6 +362,123 @@
     ],
     "answer": [
       "0"
+    ]
+  },
+  "30": {
+    "question": "Clowns are...",
+    "choices": [
+      "Intimidators",
+      "Gravediggers",
+      "Professional Comedians",
+      "Watchmen"
+    ],
+    "answer": [
+      "1"
+    ]
+  },
+  "31": {
+    "question": "What do Laertes and Hamlet both desire?",
+    "choices": [
+      "Revenge",
+      "Death",
+      "Honesty",
+      "Love"
+    ],
+    "answer": [
+      "0"
+    ]
+  },
+  "32": {
+    "question": "Flower Crowns can lead to...",
+    "choices": [
+      "Unpopularity",
+      "Love",
+      "Drowning",
+      "Revenge"
+    ],
+    "answer": [
+      "2"
+    ]
+  },
+  "33": {
+    "question": "Who delivered a letter with orders for his/their own execution?",
+    "choices": [
+      "Ophelia",
+      "Porphyria",
+      "Yossarian",
+      "The Dynamic Duo in Hamlet"
+    ],
+    "answer": [
+      "3"
+    ]
+  },
+  "34": {
+    "question": "Having many backup methods for murder could result in...",
+    "choices": [
+      "Tragedy",
+      "Success",
+      "Love",
+      "Life"
+    ],
+    "answer": [
+      "0"
+    ]
+  },
+  "35": {
+    "question": "Which of the following was not one of the ways Claudius tried using to kill Hamlet?",
+    "choices": [
+      "A sharpened sword in a duel",
+      "A poisoned sword in a duel",
+      "A poisoned drink",
+      "A surprise attack"
+    ]
+  },
+  "36": {
+    "question": "If you had a powerful brother with a position and wife you desired, you might consider pouring poison...",
+    "choices": [
+      "In his drink",
+      "Down his ear",
+      "Up his nose",
+      "On a snake's fangs"
+    ],
+    "answer": [
+      "1"
+    ]
+  },
+  "37": {
+    "question": "The best way to find out if the secrets you know about someone are true is by...",
+    "choices": [
+      "Asking the wise Priest",
+      "Spying on their every move and word",
+      "Watching their reaction while they watch a play that mirrors their secret",
+      "None of the above"
+    ],
+    "answer": [
+      "2"
+    ]
+  },
+  "38": {
+    "question": "How many commands did the ghost of King Hamlet have?",
+    "choices": [
+      "1",
+      "3",
+      "5",
+      "10"
+    ],
+    "answer": [
+      "1"
+    ]
+  },
+  "39": {
+    "question": "The age of 18 is characterized as being...",
+    "choices": [
+      "An age of adulthood",
+      "An age of childhood",
+      "An intermediary age between childhood and adulthood",
+      "An age of beauty"
+    ],
+    "answer": [
+      "2"
     ]
   }
 }
