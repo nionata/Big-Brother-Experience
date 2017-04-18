@@ -4,13 +4,16 @@ import Home from './home';
 import Questions from './questions';
 import Results from './results';
 
-var fieldValues = {}
+var fieldValues = {
+    used: []
+}
 
 class App extends Component {
   constructor(props) {
       super(props)
       this.nextStep = this.nextStep.bind(this)
       this.previousStep = this.previousStep.bind(this)
+      this.anotherOne = this.anotherOne.bind(this)
 
       this.state = {
           step: 0
@@ -33,6 +36,19 @@ class App extends Component {
       })
   }
 
+  anotherOne() {
+      fieldValues = {
+          name: fieldValues.name,
+          used: fieldValues.used
+      }
+
+      console.log(fieldValues)
+
+      this.setState({
+          step: 1
+      })
+  }
+
   showStep() {
       switch(this.state.step) {
         case 0:
@@ -45,7 +61,7 @@ class App extends Component {
                         previousStep={this.previousStep}
                         saveValues={this.saveValues}/>
         case 2:
-            return <Results fieldValues={fieldValues}/>
+            return <Results fieldValues={fieldValues} anotherOne={this.anotherOne}/>
             default:
             return null
       }

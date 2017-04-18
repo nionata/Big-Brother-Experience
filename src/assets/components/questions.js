@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../styling/questions.css';
 import questions from '../questions.json';
 
-var numberOfQuestions = 10
+var numberOfQuestions = 2
 var selectedQuestions = {}
 
 class Questions extends Component {
@@ -18,7 +18,11 @@ class Questions extends Component {
   componentWillMount() {
       if(this.props.fieldValues["1"] == null) {
           var questionBankNumber = Object.keys(questions).length - 1
-          var used = []
+          var used = this.props.fieldValues.used
+
+          if(used.length == questionBankNumber + 1) {
+              used = []
+          }
 
           for(var i = 0; i < numberOfQuestions; i++) {
             var questionNumber = Math.floor(Math.random() * (questionBankNumber + 1))
@@ -30,6 +34,8 @@ class Questions extends Component {
             used.push(questionNumber)
             selectedQuestions[i] = questions[questionNumber]
           }
+
+          this.props.saveValues({used})
       }
   }
 

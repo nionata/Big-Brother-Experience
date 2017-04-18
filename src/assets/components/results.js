@@ -1,11 +1,28 @@
 import React, { Component } from 'react';
-import '../styling/results.css'
+import '../styling/results.css';
+import Review from './review'
 
 class Results extends Component {
+  constructor(props) {
+      super(props)
+
+      this.state = {
+          isReviewing: false
+      }
+  }
+
+  handleOnReview(e) {
+      e.preventDefault()
+
+      this.setState({
+          isReviewing: !this.state.isReviewing
+      })
+  }
+
   gradeQuestions(values) {
     var grade = 0
 
-    for(var i = 0; i < Object.keys(values).length - 1; i++) {
+    for(var i = 0; i < Object.keys(values).length - 2; i++) {
         if(values[i] != null) {
             var answers = values[i].answer
 
@@ -17,67 +34,21 @@ class Results extends Component {
         }
     }
 
-    grade /= (Object.keys(values).length - 1)
+    grade /= (Object.keys(values).length - 2)
     grade *= 100
 
     return grade
   }
 
   render() {
-    var fieldValues = []
-
-    for(var i = 0; i < Object.keys(this.props.fieldValues).length - 1; i++) {
-        fieldValues.push(this.props.fieldValues[i])
-    }
-
     return (
         <div className="container-fluid">
-            <h1>{this.props.fieldValues.name}, Big Brother graded your test and you got a {this.gradeQuestions(this.props.fieldValues)}%</h1>
-            <table className="table">
-                    <thead>
-                        <tr>
-                            <th>Number</th>
-                            <th>Question</th>
-                            <th>Answer</th>
-                            <th>Your Choice</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {fieldValues.map(function(item, index) {
-                            var color = ""
-
-                            if(item.choices[item.answer[0]] == item.choices[item.selected]) {
-                                color = "#31dd8a"
-                            } else {
-                                color = "#ee3b3b"
-                            }
-
-                            var style = {
-                                backgroundColor: color
-                            }
-
-                            return (
-                                <tr key={index}>
-                                    <td>{index + 1}</td>
-                                    <td>{item.question}</td>
-                                    <td>
-                                        {
-                                            item.answer.map(function(item2, index2) {
-                                                return (
-                                                    <span>
-                                                        {item.choices[item2]}
-                                                        <br/>
-                                                    </span>
-                                                )
-                                            })
-                                        }
-                                    </td>
-                                    <td style={style}>{item.choices[item.selected]}</td>
-                                </tr>
-                            )
-                        })}
-                    </tbody>
-            </table>
+            <h1>
+                {this.props.fieldValues.name}, Big Brother graded your test and you got a {this.gradeQuestions(this.props.fieldValues)}%
+            </h1>
+            <button className="btn btn-default pull-right" onClick={this.props.anotherOne}>Another One</button>
+            <button className="btn btn-default pull-left" onClick={this.handleOnReview.bind(this)}>Review Test</button>
+            {this.state.isReviewing ? <Review fieldValues={this.props.fieldValues} /> : null}
         </div>
     );
   }
