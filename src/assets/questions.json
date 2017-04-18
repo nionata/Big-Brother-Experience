@@ -173,8 +173,8 @@
   "14": {
     "question": "Which of the following is an example of an anastrophe?",
     "choices": [
-      "\"What is writ is writ.\"",
-      "\"Come live with me and be my love.\"",
+      "\"What is writ, is writ.\"",
+      "\"Come live with me, and be my love.\"",
       "\"Milton! though shouldest be living at this hour: England hath need of thee.\"",
       "\"I love not Man the less.\""
     ],
@@ -186,10 +186,8 @@
     "question": "What would your friends say about you if you were unable to think of a story to tell?",
     "choices": [
       "\"Sad is (s)he.\"",
-      "\"(S)he's not remarkably clever",
-      "but (s)he's very good looking.\"",
-      "\"Oh",
-      "lá-lá!\"",
+      "\"(S)he's not remarkably clever, but (s)he's very good looking.\"",
+      "\"Oh, lá-lá!\"",
       "\"Even the Boer War would've been better.\""
     ],
     "answer": [
@@ -355,7 +353,7 @@
   "29": {
     "question": "Deltas are conditioned to hate...?",
     "choices": [
-      "Books and flowers",
+      "Books and Flowers",
       "Money and Intelligence",
       "Music and Writing",
       "Pencils and Paintings"
@@ -431,6 +429,9 @@
       "A poisoned sword in a duel",
       "A poisoned drink",
       "A surprise attack"
+    ],
+    "answer": [
+      "3"
     ]
   },
   "36": {
