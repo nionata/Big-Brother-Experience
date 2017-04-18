@@ -42,8 +42,6 @@ class App extends Component {
           used: fieldValues.used
       }
 
-      console.log(fieldValues)
-
       this.setState({
           step: 1
       })

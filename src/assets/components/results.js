@@ -41,13 +41,22 @@ class Results extends Component {
   }
 
   render() {
+    var msg = ""
+    var grade = this.gradeQuestions(this.props.fieldValues)
+
+    if(grade >= 80) {
+        msg = ", Big Brother has determined that your answers suggest that your independent thinking and intelligence are a threat. Off to Room 101. Your biggest fear...the AP Test. Luckily you got a " + grade + "% so you will be fine!"
+    } else if(grade >= 60) {
+        msg = ", Big Brother has determined that your answers suggest that your knowledge and hints of rebellious thoughts are mildly suspicious. Telescreens will be keeping an extra close watch over you. With a " + grade + "% you are getting close to becoming a threat!"
+    } else {
+        msg = ", Big Brother has determined that your answers reflect your devotion to Big Brother, ability to doublethink, and embodiment of a loyal Party member. Make sure you don't improve that " + grade + "% or Big Brother might question your loyalty!"
+    }
+
     return (
-        <div className="container-fluid">
-            <h1>
-                {this.props.fieldValues.name}, Big Brother graded your test and you got a {this.gradeQuestions(this.props.fieldValues)}%
-            </h1>
-            <button className="btn btn-default pull-right" onClick={this.props.anotherOne}>Another One</button>
-            <button className="btn btn-default pull-left" onClick={this.handleOnReview.bind(this)}>Review Test</button>
+        <div className="container-fluid" id="results">
+            <p>{this.props.fieldValues.name}{msg}</p>
+            <button className="btn btn-default" onClick={this.handleOnReview.bind(this)}>Review Test</button>
+            <button className="btn btn-default" onClick={this.props.anotherOne}>Another One</button>
             {this.state.isReviewing ? <Review fieldValues={this.props.fieldValues} /> : null}
         </div>
     );
