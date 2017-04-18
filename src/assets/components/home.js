@@ -67,10 +67,10 @@ class Home extends Component {
       <span>
         <div id="prompt">
             <h2 id="prompt-1" className="fade-out">You are walking in the prole section and discover a shop with some books...</h2>
-            <h2 id="prompt-2" className="fade-out">After asking about life before the war, the shop keep says...</h2>
+            <h2 id="prompt-2" className="fade-out">After asking about life before the war, the shop keeper says...</h2>
             <h2 id="prompt-3" className="fade-out">"Why don't you come and take an old test I have from before the war?"...</h2>
-            <h2 id="prompt-4" className="fade-out">You agree and follow the shop keep to a back room...</h2>
-            <h2 id="prompt-5" className="fade-out">Good luck {this.name}</h2>
+            <h2 id="prompt-4" className="fade-out">You agree and follow the shop keeper to a back room...</h2>
+            <h2 id="prompt-5" className="fade-out">Good luck!</h2>
         </div>
         <div className="container-fluid" id="home">
             <img src={BBFront} className="img-fluid" alt="logo" />
