@@ -22,13 +22,11 @@ class Review extends Component {
                     </thead>
                     <tbody>
                         {fieldValues.map(function(item, index) {
-                            var color = ""
+                            var color = "#ee3b3b"
 
                             item.answer.map(function(item2, index2) {
                                 if(item2 == item.selected) {
                                     color = "#31dd8a"
-                                } else {
-                                    color = "#ee3b3b"
                                 }
                             })
 

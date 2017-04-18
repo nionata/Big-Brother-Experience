@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import '../styling/results.css';
 import Review from './review'
 
+var grade = 0
+
 class Results extends Component {
   constructor(props) {
       super(props)
@@ -9,6 +11,10 @@ class Results extends Component {
       this.state = {
           isReviewing: false
       }
+  }
+
+  componentWillMount() {
+      grade = this.gradeQuestions(this.props.fieldValues)
   }
 
   handleOnReview(e) {
@@ -23,15 +29,11 @@ class Results extends Component {
     var grade = 0
 
     for(var i = 0; i < Object.keys(values).length - 2; i++) {
-        if(values[i] != null) {
-            var answers = values[i].answer
-
-            for(var i2 = 0; i2 < answers.length; i2++) {
-                if(answers[i2] == values[i].selected) {
-                    grade += 1
-                }
+        values[i].answer.map(function(item, index) {
+            if(item == values[i].selected) {
+                grade += 1
             }
-        }
+        })
     }
 
     grade /= (Object.keys(values).length - 2)
@@ -42,7 +44,6 @@ class Results extends Component {
 
   render() {
     var msg = ""
-    var grade = this.gradeQuestions(this.props.fieldValues)
 
     if(grade >= 80) {
         msg = ", Big Brother has determined that your answers suggest that your independent thinking and intelligence are a threat. Off to Room 101. Your biggest fear...the AP Test. Luckily you got a " + grade + "% so you will be fine!"
